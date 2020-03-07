@@ -85,8 +85,13 @@
         var $tdYear = document.createElement('td');
         var $tdPlate = document.createElement('td');
         var $tdColor = document.createElement('td');
+        var $remove = document.createElement('td');
+        var $buttonRemove = document.createElement('button');
 
-        $image.setAttribute('src', $('[data-js="image"]').get().value)
+        $image.setAttribute('src', $('[data-js="image"]').get().value);
+        $buttonRemove.textContent = 'Remove Car';
+        $buttonRemove.addEventListener('click', handleRemove, false);
+        $remove.appendChild($buttonRemove);
 
         $tdImage.appendChild($image);
         $tdBrand.textContent = $('[data-js="brand-model"]').get().value;
@@ -99,6 +104,11 @@
         $tr.appendChild($tdYear);
         $tr.appendChild($tdPlate);
         $tr.appendChild($tdColor);
+        $tr.appendChild($remove);
+
+        function handleRemove() {
+          $buttonRemove.parentNode.parentNode.innerHTML = '';
+        }
 
         return $fragment.appendChild($tr);
       },
