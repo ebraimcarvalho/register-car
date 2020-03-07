@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+.form, .table {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 300px;
+}
+
+td {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+label {
+  display: block;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 300px;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+button:hover, button:focus {
+  background-color: darkgreen;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+}
