@@ -39,7 +39,6 @@
   var app = (function appController() {
     return {
       init: function init() {
-        console.log('app init')
         this.companyInfo();
         this.initEvents();
       },
@@ -58,7 +57,7 @@
         var data = JSON.parse(this.responseText);
         var $companyName = $('[data-js="company-name"]').get();
         var $companyPhone = $('[data-js="company-phone"]').get();
-        $companyName.textContent = data.name;
+        $companyName.innerHTML = `<i>${data.name}</i>`;
         $companyPhone.textContent = data.phone;
       },
 
