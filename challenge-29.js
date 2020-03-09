@@ -107,7 +107,10 @@
         $tr.appendChild($remove);
 
         function handleRemove() {
-          $buttonRemove.parentNode.parentNode.innerHTML = '';
+          var removeDiv = $buttonRemove.parentNode.parentNode;
+          // removeDiv.outerHTML = '';
+          removeDiv.remove();
+          // removeDiv.parentNode.removeChild(removeDiv);
         }
 
         return $fragment.appendChild($tr);
